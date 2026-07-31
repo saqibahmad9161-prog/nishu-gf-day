@@ -7,53 +7,96 @@
 
 <style>
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #ff758c, #ffb199);
-    overflow: hidden;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ff758c, #ffb199);
+  overflow: hidden;
 }
 
 .card {
-    width: 86%;
-    max-width: 430px;
-    padding: 35px 25px;
-    text-align: center;
-    background: rgba(255,255,255,0.96);
-    border-radius: 28px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-    z-index: 2;
-}
-
-.heart {
-    font-size: 65px;
-    animation: beat 1s infinite;
+  width: 88%;
+  max-width: 430px;
+  padding: 35px 25px;
+  text-align: center;
+  background: rgba(255,255,255,0.95);
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
 
 h1 {
-    color: #ff3f6c;
-    font-size: 36px;
-    margin: 10px 0;
-}
-
-h2 {
-    color: #444;
-    font-size: 24px;
+  color: #ff4f70;
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
 p {
-    color: #555;
-    font-size: 18px;
-    line-height: 1.6;
+  color: #555;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.heart {
+  font-size: 55px;
+  animation: beat 1s infinite;
 }
 
 button {
-    border: none;
-   
+  border: none;
+  padding: 13px 25px;
+  border-radius: 25px;
+  background: #ff4f70;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#message {
+  display: none;
+  margin-top: 20px;
+  color: #ff4f70;
+  font-weight: bold;
+}
+
+@keyframes beat {
+  50% {
+    transform: scale(1.2);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="heart">🎀❤️</div>
+
+  <h1>For Nishu 💕</h1>
+
+  <p>
+    Some people are just a beautiful part of our memories,
+    and you are one of mine. 🌸
+  </p>
+
+  <button onclick="showMessage()">Tap Here 💌</button>
+
+  <div id="message">
+    You will always have a special place in my heart. ❤️
+  </div>
+</div>
+
+<script>
+function showMessage() {
+  document.getElementById("message").style.display = "block";
+}
+</script>
+
+</body>
+</html>
